@@ -1,10 +1,7 @@
-import MdFiberManualRecord from "react-icons/lib/md/FiberManualRecord";
-
 export default {
   name: "artifact",
   type: "document",
   title: "Artifact",
-  icon: MdFiberManualRecord,
   fields: [
     {
       name: "name",
