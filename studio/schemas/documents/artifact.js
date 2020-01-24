@@ -1,10 +1,10 @@
-import MdPerson from "react-icons/lib/md/person";
+import MdFiberManualRecord from "react-icons/lib/md/FiberManualRecord";
 
 export default {
   name: "artifact",
   type: "document",
   title: "Artifact",
-  icon: MdPerson,
+  icon: MdFiberManualRecord,
   fields: [
     {
       name: "name",
@@ -22,9 +22,10 @@ export default {
       }
     },
     {
-      name: "image",
-      title: "Image",
-      type: "figure"
+      name: "votes",
+      title: "Votes",
+      type: "number",
+      readOnly: true
     }
   ],
   preview: {
