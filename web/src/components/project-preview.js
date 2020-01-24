@@ -10,7 +10,7 @@ import { responsiveTitle3 } from "./typography.module.css";
 class ProjectPreview extends React.Component {
   vote() {
     fetch(
-      "https://sanity-gatsby-portfolio-web-s8ps7nxi.netlify.com/.netlify/functions/hello"
+      "http://sanity-gatsby-portfolio-web-s8ps7nxi.netlify.com/.netlify/functions/vote"
     ).then(res => res.json());
   }
   render() {
