@@ -6101,9 +6101,9 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 math-expression-evaluator@^1.2.14:
-  version "1.2.20"
-  resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.20.tgz#df613ee2f08b59a67d72613dad13580221e97f34"
-  integrity sha512-dJpN6qqwC3PaFAvOvmBvzzm4HcQLSMFWyjRnvy1QcPxXnxy7P4AGdLddpm89HEhNjJs43vLO1b5raABwSSsYvA==
+  version "1.2.21"
+  resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.21.tgz#205dd5ed2649217c0cb24e2344e4daa7c4f4e18a"
+  integrity sha512-vJ1IuZ5BrRofXiVf/eEVIg5DWYtWLz+YDtgCWPbudMUGIYO02BRC90rJuQTW93sMvkWWT16JE2dHEzaVA1jmyg==
 
 md5-o-matic@^0.1.1:
   version "0.1.1"
