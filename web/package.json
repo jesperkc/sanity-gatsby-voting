@@ -3,13 +3,22 @@
   "name": "sanity-gatsby-portfolio-web",
   "version": "1.0.0",
   "author": "Sanity <hello@sanity.io>",
-  "engines": {
-    "node": "8.16.0"
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   },
   "scripts": {
-    "build": "gatsby build",
+    "dev": "run-p start:**",
+    "start:app": "gatsby develop",
+    "start:lambda": "netlify-lambda serve src/functions",
+    "build": "gatsby build && netlify-lambda build src/functions",
+    "build:app": "gatsby build",
+    "build:lambda": "netlify-lambda build functions",
     "clean-cache": "gatsby clean",
-    "dev": "npm run clean-cache && gatsby develop",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
@@ -38,6 +47,8 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-standard": "^4.0.0",
+    "netlify-lambda": "^1.6.3",
+    "npm-run-all": "^4.1.5",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
     "prettier-eslint-cli": "^4.7.1",

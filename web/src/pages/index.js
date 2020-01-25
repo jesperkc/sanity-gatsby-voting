@@ -20,8 +20,8 @@ export const query = graphql`
     }
     artifacts: allSanityArtifact {
       nodes {
+        _id
         name
-        id
         votes
       }
     }

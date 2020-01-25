@@ -8,10 +8,19 @@ import styles from "./project-preview.module.css";
 import { responsiveTitle3 } from "./typography.module.css";
 
 class ProjectPreview extends React.Component {
+  constructor() {
+    super();
+
+    this.vote = this.vote.bind(this);
+  }
   vote() {
-    fetch(
-      "http://sanity-gatsby-portfolio-web-s8ps7nxi.netlify.com/.netlify/functions/vote"
-    ).then(res => res.json());
+    fetch("/.netlify/functions/vote", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ id: this.props._id })
+    }).then(res => res.json());
   }
   render() {
     const { name, votes } = this.props;
