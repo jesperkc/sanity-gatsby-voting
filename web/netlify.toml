@@ -12,6 +12,6 @@
     Access-Control-Allow-Origin = "*"
 
 [build]
-  command = "npm run build"
+  command = "yarn build"
   functions = "functions"
   publish = "public"
