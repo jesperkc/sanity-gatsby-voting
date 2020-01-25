@@ -8,6 +8,9 @@ const token = process.env.SANITY_READ_TOKEN;
 
 const isProd = process.env.NODE_ENV === "production";
 
+console.log("isProd", isProd);
+console.log(clientConfig.sanity);
+
 module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
